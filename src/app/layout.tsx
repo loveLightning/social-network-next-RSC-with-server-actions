@@ -1,11 +1,9 @@
-import type { Metadata } from "next";
-
 import '@mantine/core/styles.css';
-import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Main",
-  description: "Social network",
+  title: 'Main',
+  description: 'Social network',
 };
 
 export default function RootLayout({
@@ -18,6 +16,7 @@ export default function RootLayout({
       <body>
         {/* <Provider store={store}> */}
         {/* </Provider> */}
+        {children}
       </body>
     </html>
   );
