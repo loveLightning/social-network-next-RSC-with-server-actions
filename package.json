@@ -12,7 +12,7 @@
     "prepare": "husky",
     "test": "jest",
     "test:watch": "jest --watch",
-    "type-check": "tsc --project tsconfig.json --pretty --noEmit && echo "
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit && echo"
   },
   "dependencies": {
     "@mantine/core": "^7.7.1",
