@@ -44,13 +44,5 @@
     "postcss-preset-mantine": "^1.14.0",
     "postcss-simple-vars": "^7.0.1",
     "typescript": "^5"
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": "eslint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn run lint-staged"
-    }
   }
 }
