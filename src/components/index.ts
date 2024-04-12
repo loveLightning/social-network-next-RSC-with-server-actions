@@ -1,1 +1,1 @@
-export { Register } from './register';
+export { Registe, r } from './register';
