@@ -24,12 +24,13 @@ jobs:
     concurrency:
       group: staging
       cancel-in-progress: true
+
     steps:
-      - name: SSH Command
-        uses: D3rHase/ssh-command-action@v0.2.2
+      - name: executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@v1.0.3
         with:
-          # hostname / IP of the server
           host: ${{ secrets.STAGING_SSH_HOST }}
-          user: ${{ secrets.STAGING_SSH_USERNAME }}
-          private_key: ${{ secrets.STAGING_SSH_PRIVATE_KEY }}
-          command: source ~/.nvm/nvm.sh; ~/deploy.sh
+          username: ${{ secrets.STAGING_SSH_USERNAME }}
+          key: ${{ secrets.STAGING_SSH_PRIVATE_KEY }}
+          port: ${{ secrets.STAGING_SSH_PORT }}
+          script: whoami
