@@ -12,7 +12,6 @@ export default withSentryConfig(
     silent: true,
     org: 'nutnet-uj',
     project: 'javascript-nextjs',
-    dryRun: process.env.NODE_ENV === 'development',
     // An auth token is required for uploading source maps.
     authToken: process.env.SENTRY_AUTH_TOKEN,
   },
