@@ -1,3 +1,7 @@
 export default function Home() {
-  return <>CI / CD + Title</>;
+  return (
+    <div>
+      <p>CI/CD is completed on the staging server</p>
+    </div>
+  );
 }
