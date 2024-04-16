@@ -31,4 +31,4 @@ jobs:
         with:
           hosts: ${{ secrets.STAGING_SSH_USER_WITH_HOST }}
           privateKey: ${{ secrets.STAGING_SSH_PRIVATE_KEY }}
-          command:  source ~/.nvm/nvm.sh; ~/deploy.sh
+          command:  source ~/.nvm/nvm.sh; ~/social-network-next-RSC-with-server-actions/deploy.sh
