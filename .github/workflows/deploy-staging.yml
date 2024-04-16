@@ -26,13 +26,11 @@ jobs:
       cancel-in-progress: true
 
     steps:
-      - name: SSH Command
-        uses: D3rHase/ssh-command-action@v0.2.2
+      - name: Execute SSH commmands on remote server
+        uses: JimCronqvist/action-ssh@master
         with:
-          host: ${{ secrets.STAGING_SSH_HOST }}
-          user: ${{ secrets.STAGING_SSH_USERNAME }}
-          private_key: ${{ secrets.STAGING_SSH_PRIVATE_KEY }}
-          host_fingerprint: ${{ secrets.STAGING_SSH_FINGERPRINT }}
+          hosts: ${{ secrets.STAGING_SSH_USER_WITH_HOST }}
+          privateKey: ${{ secrets.STAGING_SSH_PRIVATE_KEY }}
           command: |
             source ~/.nvm/nvm.sh
             cd ~/social-network-next-RSC-with-server-actions
