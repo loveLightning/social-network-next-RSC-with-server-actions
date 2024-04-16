@@ -31,4 +31,7 @@ jobs:
         with:
           hosts: ${{ secrets.STAGING_SSH_USER_WITH_HOST }}
           privateKey: ${{ secrets.STAGING_SSH_PRIVATE_KEY }}
-          command: ls -lah
+          script: 
+            cd social-network-next-RSC-with-server-actions
+            git pull
+            pm2 reload all
