@@ -1,0 +1,40 @@
+name: Deploy prod
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.x.x
+          cache: yarn
+      - run: yarn
+      - run: yarn lint
+      - run: yarn type-check
+      - run: yarn test
+  deploy:
+    needs: lint
+    runs-on: ubuntu-latest
+    concurrency:
+      group: staging
+      cancel-in-progress: true
+
+    steps:
+      - name: Execute SSH commmands on remote server
+        uses: JimCronqvist/action-ssh@master
+        with:
+          hosts: ${{ secrets.PROD_SSH_USER_WITH_HOST }}
+          privateKey: ${{ secrets.PROD_SSH_PRIVATE_KEY }}
+          command: |
+            source ~/.nvm/nvm.sh
+            cd ~/social-network-next-RSC-with-server-actions
+            git pull
+            yarn
+            yarn build
+            npx pm2 reload all
