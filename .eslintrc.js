@@ -28,7 +28,6 @@ module.exports = {
     // JavaScript rules
     'prefer-const': 'warn',
     'no-var': 'warn',
-    'no-unused-vars': 'warn',
     'object-shorthand': 'warn',
     'quote-props': ['warn', 'as-needed'],
     // TypeScript rules
@@ -45,6 +44,7 @@ module.exports = {
         objectLiteralTypeAssertions: 'never',
       },
     ],
+    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
     // React rules
     'react/jsx-fragments': ['warn', 'syntax'], // Shorthand syntax for React fragments
     'react/jsx-filename-extension': [
@@ -58,8 +58,14 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'prettier/prettier': [
-      'warn',
+      'error',
       {
+        tabWidth: 2,
+        trailingComma: 'all',
+        semi: false,
+        arrowParens: 'always',
+        printWidth: 80,
+        bracketSpacing: true,
         endOfLine: 'auto',
       },
     ],
@@ -69,4 +75,4 @@ module.exports = {
       version: 'detect',
     },
   },
-};
+}

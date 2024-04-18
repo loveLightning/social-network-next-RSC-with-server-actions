@@ -1,7 +1,7 @@
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom'
 
 describe('Home', () => {
   it('Renders the heading', () => {
-    return;
-  });
-});
+    return
+  })
+})

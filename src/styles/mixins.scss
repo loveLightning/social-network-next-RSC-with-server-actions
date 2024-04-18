@@ -1,0 +1,26 @@
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+  /* stylelint-disable-next-line scss/no-global-function-names */
+  $max: map-get($breakpoints, $name);
+  @return if($max and $max > 0, $max - 0.02, null);
+}
+
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+/* using of the breakpoints */
+
+/* 
+@include media-breakpoint-down(xs) { ... }
+@include media-breakpoint-down(sm) { ... }
+@include media-breakpoint-down(md) { ... }
+@include media-breakpoint-down(lg) { ... } 
+@include media-breakpoint-down(xl) { ... } 
+*/

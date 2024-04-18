@@ -1,0 +1,35 @@
+{
+  "NotFoundPage": {
+    "title": "Page Not Found",
+    "description": "Oops! It seems like you've stumbled upon a page that doesn't exist."
+  },
+  "Footer": {
+    "copyright": "© 2024 Social network. All rights reserved."
+  },
+  "LocaleSwitcher": {
+    "pick": "Pick a language",
+    "label": "Language"
+  },
+  "LocaleLayout": {
+    "title": "Social network",
+    "description": "This is social network"
+  },
+  "SidebarData": {
+    "my-profile": {
+      "title": "My profile",
+      "link": "/profile"
+    },
+    "messages": {
+      "title": "Messages",
+      "link": "/messages"
+    },
+    "friends": {
+      "title": "Friends",
+      "link": "/friends"
+    },
+    "communities": {
+      "title": "Communities",
+      "link": "/communities"
+    }
+  }
+}

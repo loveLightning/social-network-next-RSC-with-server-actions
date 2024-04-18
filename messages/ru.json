@@ -1,0 +1,35 @@
+{
+  "NotFoundPage": {
+    "title": "Страница не найдена",
+    "description": "Упс! Кажется, вы наткнулись на несуществующую страницу."
+  },
+  "Footer": {
+    "copyright": "© 2024 Социальная сеть. Все права защищены"
+  },
+  "LocaleSwitcher": {
+    "pick": "Выбрать язык",
+    "label": "Язык"
+  },
+  "LocaleLayout": {
+    "title": "Социальная сеть",
+    "description": "Это социальная сеть"
+  },
+  "SidebarData": {
+    "my-profile": {
+      "title": "Мой профиль",
+      "link": "/profile"
+    },
+    "messages": {
+      "title": "Сообщения",
+      "link": "/messages"
+    },
+    "friends": {
+      "title": "Друзья",
+      "link": "/friends"
+    },
+    "communities": {
+      "title": "Сообщества",
+      "link": "/communities"
+    }
+  }
+}

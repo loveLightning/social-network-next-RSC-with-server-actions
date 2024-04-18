@@ -1,0 +1,17 @@
+// breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// colors
+$white: #fff;
+$black: #000;
+$dark-blue: #3f51b5;
+
+// fonts
+$font-primary: roboto san-serif;

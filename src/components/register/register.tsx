@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
 export const Register = () => {
   return (
@@ -32,5 +32,5 @@ export const Register = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
